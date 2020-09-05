@@ -1,0 +1,84 @@
+<body>
+    <div class="section flex listOfServices " >
+        <ul >
+            <li><button class="serviceButton">Service Name</button></li>
+            <li><button class="serviceButton">Service Name</button></li>
+            <li><button class="serviceButton">Service Name</button></li>
+        </ul>               
+    </div>
+    
+    <div class="section flex about">
+        <ul>
+            <li><p>Long paragraph about how the company is awesome</p></li>
+            <li>some photo</li>
+        </ul>
+        
+    
+    </div>
+    
+    <div class="section testimonials flex">
+
+        <ul class="comments ">
+            <li class="comment bubble"><p>
+                The quick brown fox jumps over the lazy dog.  
+                The quick brown fox jumps over the lazy dog.
+                The quick brown fox jumps over the lazy dog.
+            </p></li>
+            <li class="comment bubble"><p>The quick brown fox jumps over the lazy dog.</p></li>
+            <li class="comment bubble"><p>The quick brown fox jumps over the lazy dog.</p></li>
+        </ul>
+
+    
+        
+    </div>
+    
+    <div class="section flex contactForm">
+
+        <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
+            <h1>Convinced to work with us?</h1>
+            <h2 >Company has helped agencies keep their promises to clients since 2005.</h2>
+            <h3 *ngIf="success">Successfully submitted.</h3>
+            <label>
+                
+                <input type="text" formControlName="name" placeholder="Full Name" >
+                <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+                  <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
+                </div>
+              </label>
+
+              <label>
+                
+                <input type="email" formControlName="email" ngModel email="true" placeholder="Email Address">
+                <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
+                  <div *ngIf="messageForm.controls.email.errors.required">Your email is required</div>
+                  <div *ngIf="messageForm.controls.email.errors.email">Please enter a valid email address.</div>
+               
+                </div>
+              </label>
+
+              <label>
+                <input type="" formControlName="phone" placeholder="Phone Number">
+                <div *ngIf="submitted && messageForm.controls.phone.errors" class="error">
+                  <div *ngIf="messageForm.controls.phone.errors.required">Your phone is required</div>
+                  <div *ngIf="messageForm.controls.phone.errors.pattern">Please enter a valid phone number.</div>
+                </div>
+              </label>
+
+              <label>
+                <textarea formControlName="message" placeholder="Message in brief"></textarea>
+                <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
+                  <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
+                </div>
+              </label>
+
+              <input type="submit" value="Submit" class="cta">
+
+              
+
+        </form>
+    </div>
+    
+</body>
+
+
+

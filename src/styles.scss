@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Geneva;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1.3em;  
+    justify-content: space-between;
+    align-content: space-between;
+    
+
+    a {
+        color: white;
+    }
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;  
+    height:100%;
+    align-content: space-between;
+    flex-grow: 1;         
+    
+
+    ul {
+            list-style-type: none;
+            margin: 0; 
+            padding: 0;
+    
+            li {
+                float: left;
+                padding: 1.5em; 
+            }
+        }     
+}
+

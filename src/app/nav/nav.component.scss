@@ -1,0 +1,64 @@
+header {
+    background: black;
+    position: fixed;
+    top:0;
+    width: 100%;
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    .logo {
+        font-weight: lighter;
+    }
+    .contact{
+        justify-self: right;
+    }
+
+    nav {
+       //justify-self: right;
+       justify-content: flex-end;
+
+        ul {
+            list-style-type: none;
+            margin: 0; 
+            padding: 0;
+
+            li {
+                float: left;
+
+                a {
+                    padding: 1.5em;
+                    text-transform: uppercase;
+                    font-size: .8em;
+
+                    &:hover {
+                        background: #f3bad5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+    padding: none;
+    background-color:black;
+    color: white;
+    position:fixed;
+    width:100%;
+    left: 0;
+    bottom: 0;
+
+
+        .copyright {
+            float: left;
+        }
+        .social-media {
+            float: right;
+        }
+    
+    //top: 100%;
+}
